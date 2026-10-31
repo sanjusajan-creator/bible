@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f4ec" id="theme-color-meta" />
+    <meta
+      name="description"
+      content="Selah is a quiet place to read Scripture. Every chapter, classic public-domain translations, thoughtful search, saved verses, notes, and reading plans."
+    />
+    <meta property="og:title" content="Selah — Scripture, unhurried" />
+    <meta
+      property="og:description"
+      content="A quiet place to read, reflect, and return to the living Word."
+    />
+    <meta property="og:type" content="website" />
+    <title>Selah — Scripture, unhurried</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Noto+Serif:wght@400;600&family=Noto+Serif+Arabic:wght@400;600&family=Noto+Serif+Hebrew:wght@400;600&family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+Bengali:wght@400;600&family=Noto+Serif+Tamil:wght@400;600&family=Noto+Serif+Telugu:wght@400;600&family=Noto+Serif+Kannada:wght@400;600&family=Noto+Serif+Malayalam:wght@400;600&family=Noto+Serif+Gujarati:wght@400;600&family=Noto+Serif+Gurmukhi:wght@400;600&family=Noto+Serif+Thai:wght@400;600&family=Noto+Serif+Lao:wght@400;600&family=Noto+Serif+Myanmar:wght@400;600&family=Noto+Serif+Georgian:wght@400;600&family=Noto+Serif+Armenian:wght@400;600&family=Noto+Serif+Khmer:wght@400;600&family=Noto+Serif+Sinhala:wght@400;600&family=Noto+Serif+Tibetan:wght@400;600&family=Noto+Serif+Ethiopic:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      (function () {
+        try {
+          var stored = JSON.parse(localStorage.getItem('selah.v1') || 'null');
+          var theme = stored && ['light', 'sepia', 'dark'].indexOf(stored.theme) >= 0 ? stored.theme : 'light';
+          document.documentElement.dataset.theme = theme;
+        } catch (error) {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#/" aria-label="Selah home">
+          <span class="brand-mark" id="brand-mark"></span>
+          <span class="brand-word">Selah</span>
+          <span class="brand-note">Scripture, unhurried</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="#/read/psalms/23" data-nav="read">Read</a>
+          <a href="#/explore" data-nav="explore">Explore</a>
+          <a href="#/plans" data-nav="plans">Plans</a>
+          <a href="#/saved" data-nav="saved" class="nav-library">Library</a>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="version-chip" id="header-version" aria-label="Change Bible translation">
+            <span class="version-chip-label">Translation</span>
+            <span class="version-chip-short" id="version-chip-short">ASV</span>
+            <span class="version-chip-chevron" aria-hidden="true"></span>
+          </button>
+          <a class="icon-btn header-search" href="#/search" aria-label="Search Scripture" data-tooltip="Search">
+            <span data-icon="search"></span>
+          </a>
+          <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" data-tooltip="Appearance">
+            <span id="theme-icon"></span>
+          </button>
+          <a class="icon-btn header-saved" href="#/saved" aria-label="Saved verses" data-tooltip="Your library">
+            <span data-icon="bookmark"></span>
+            <span class="saved-badge" id="saved-badge" hidden></span>
+          </a>
+          <button type="button" class="icon-btn" id="settings-open" aria-label="Reading settings" data-tooltip="Settings">
+            <span data-icon="sliders"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="app" id="app" tabindex="-1"></main>
+
+    <footer class="site-footer" id="site-footer">
+      <div class="shell footer-main">
+        <div class="footer-brand">
+          <a class="brand brand--footer" href="#/">
+            <span class="footer-mark" id="footer-mark"></span>
+            <span class="brand-word">Selah</span>
+          </a>
+          <p class="footer-tagline">A quiet place to read, reflect,<br />and return to the living Word.</p>
+          <p class="footer-verse">“Be still, and know that I am God.”<span>Psalm 46:10</span></p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <p class="footer-heading">Read</p>
+            <a href="#/read/genesis/1">Genesis</a>
+            <a href="#/read/psalms/23">Psalms</a>
+            <a href="#/read/john/1">The Gospels</a>
+            <a href="#/read/romans/8">Romans</a>
+          </div>
+          <div>
+            <p class="footer-heading">Practice</p>
+            <a href="#/explore">Explore topics</a>
+            <a href="#/plans">Reading plans</a>
+            <a href="#/search">Search Scripture</a>
+            <a href="#/saved">Your library</a>
+          </div>
+          <div>
+            <p class="footer-heading">About</p>
+            <a href="https://bible.helloao.org/docs/reference/" target="_blank" rel="noopener">Free Use Bible API <span data-icon="external"></span></a>
+            <a href="#/plans/story">The whole story</a>
+            <a href="#/explore">All 66 books</a>
+            <a href="#/saved">Private by design</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="shell footer-bottom">
+        <p>© <span id="footer-year">2026</span> Selah. Made for quiet moments.</p>
+        <p>Scripture text served by the free, open <a href="https://bible.helloao.org" target="_blank" rel="noopener">Free Use Bible API</a>. Your notes and saved verses stay on this device.</p>
+      </div>
+    </footer>
+
+    <nav class="bottom-nav" aria-label="Mobile navigation">
+      <a href="#/read/psalms/23" data-nav="read">
+        <span data-icon="book-open"></span>
+        <span>Read</span>
+      </a>
+      <a href="#/explore" data-nav="explore">
+        <span data-icon="compass"></span>
+        <span>Explore</span>
+      </a>
+      <a href="#/search" data-nav="search">
+        <span data-icon="search"></span>
+        <span>Search</span>
+      </a>
+      <a href="#/plans" data-nav="plans">
+        <span data-icon="calendar"></span>
+        <span>Plans</span>
+      </a>
+      <a href="#/saved" data-nav="saved">
+        <span data-icon="bookmark"></span>
+        <span>Saved</span>
+      </a>
+    </nav>
+
+    <div id="drawer-root"></div>
+    <div id="modal-root"></div>
+    <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+    <noscript>
+      <div class="noscript">
+        <h1>Selah needs JavaScript</h1>
+        <p>This quiet reader uses JavaScript to fetch Scripture and keep your place. Please enable it to continue.</p>
+      </div>
+    </noscript>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

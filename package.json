@@ -1,0 +1,11 @@
+{
+  "name": "selah",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Selah — a quiet, editorial Bible reader.",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs"
+  }
+}
