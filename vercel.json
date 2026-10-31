@@ -1,8 +1,9 @@
 {
-  "buildCommand": "echo 'No build step required'",
+  "buildCommand": "echo 'No build step required - static site'",
   "devCommand": "node server.mjs",
   "installCommand": "echo 'No install required'",
   "framework": null,
+  "outputDirectory": ".",
   "rewrites": [
     {
       "source": "/(.*)",
